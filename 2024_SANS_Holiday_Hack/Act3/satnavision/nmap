@@ -1,0 +1,22 @@
+─$ nmap -Pn -p- 34.29.105.184
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-10 23:57 EST
+Nmap scan report for 184.105.29.34.bc.googleusercontent.com (34.29.105.184)
+Host is up (0.062s latency).
+Not shown: 65521 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE
+22/tcp   open     ssh
+25/tcp   filtered smtp
+80/tcp   filtered http
+135/tcp  filtered msrpc
+136/tcp  filtered profile
+137/tcp  filtered netbios-ns
+138/tcp  filtered netbios-dgm
+139/tcp  filtered netbios-ssn
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+1883/tcp open     mqtt
+5355/tcp filtered llmnr
+8000/tcp open     http-alt
+9001/tcp open     tor-orport
+
+Nmap done: 1 IP address (1 host up) scanned in 107.82 seconds
