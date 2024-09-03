@@ -1,3 +1,2 @@
-# ctf-writeups
-
-my ctf writeups
+# Ctf-Writeups
+My writeups for various CTFs
