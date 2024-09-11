@@ -1,5 +1,5 @@
 # Yors-Truly
-Yours-Truly is a cryptography challenge where we need to find the key:
+Yours-Truly is a cryptography challenge where we need to find the key of the given encryption scheme:
 
 ```Python
 import base64
@@ -15,7 +15,7 @@ ciphertext_b64 = base64.b64encode(byte_xor(key.encode(), plaintext.encode()))
 ciphertext_decoded = base64.b64decode("NkMHEgkxXjV/BlN/ElUKMVZQEzFtGzpsVTgGDw==")
 ```
 
-# Decryption
+## Decryption
 We keep `plaintext` and `byte_xor(ba1,ba2)` for our own use. We also know that `NkMHEgkxXjV/BlN/ElUKMVZQEzFtGzpsVTgGDw==` is the ciphertext encoded in `base64`.
 ```python
 import base64
@@ -42,7 +42,7 @@ key = key.decode()
 print(key)
 ```
 
-# Flag
+## Flag
 > wctf{X0R_i5_f0rEv3r_My_L0Ve}
 
 ![Flag](flag.png)

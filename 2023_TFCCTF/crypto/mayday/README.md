@@ -1,10 +1,10 @@
 # Mayday
 Mayday is a crypto challenge focusing on the NATO phonetic alphabet. The ciphertext seems to be a random string of words: `Whiskey Hotel Four Tango Dash Alpha Romeo Three Dash Yankee Oscar Uniform Dash Sierra One November Kilo India November Golf Dash Four Bravo Zero Uniform Seven`.
 
-# NATO phonetic alphabet
+## NATO phonetic alphabet
 Googling the string, the [NATO phonetic alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet) comes up. All the words in the ciphertext are contained in the NATO phonetic alphabet's code words.
 
-# Decryption
+## Decryption
 Now all we must do is decrypt the words back to their corresponding letters. Doing this using python can save you time.
 ```Python
 ct = 'Whiskey Hotel Four Tango Dash Alpha Romeo Three Dash Yankee Oscar Uniform Dash Sierra One November Kilo India November Golf Dash Four Bravo Zero Uniform Seven'
@@ -55,7 +55,7 @@ for word in ct:
     pt+=list(filter(lambda x: nato_phonetic_alphabet[x] == word, nato_phonetic_alphabet))[0]
 ```
 
-# Flag
+## Flag
 > TFCCTF{WH4T-AR3-YOU-S1NKING-4B0U7}
 
 Lastly we print the `pt` to get the flag:

@@ -1,7 +1,7 @@
 # Ancient Encodings
 Ancient Encodings is a crypto challenge. We are given an encryption file as well as an encrypted flag and need to decrypt the flag.
 
-# Encryption 
+## Encryption 
 We notice that `FLAG` was first encoded. Then it was written to a file. 
 
 ````Python 
@@ -24,7 +24,7 @@ def encode(message):
     return hex(bytes_to_long(b64encode(message)))
 ````
 
-# Decryption
+## Decryption
 First we save the content of `out.py` into a variable `ct`.
 
 ````Python
@@ -39,5 +39,5 @@ ct = b64decode(ct)
 pt = ct.decode()
 ````
 
-# Flag
+## Flag
 > HTB{1n_y0ur_j0urn3y_y0u_wi1l_se3_th15_enc0d1ngs_ev3rywher3}`

@@ -1,7 +1,7 @@
 # Small StEps
 Small StEps is a crypto challenge focusing on RSA. We are given an encrypted flag and an encryption scheme and need to decrypt the flag.
 
-# Encryption
+## Encryption
 We notice that the encryption algorithm used is RSA with `e=3`, `p` and `q` being randoms, and `n=pq`.
 
 ````Python 
@@ -18,7 +18,7 @@ class RSA:
         return pow(plaintext, self.e, self.n)
 ````
 
-# Query
+## Query
 We run `nc 178.62.9.10 30705` to interact with the server. We make three queries to the server and notice that `e = 3` and `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` every time, but `N` changes.
 
 ````
@@ -69,7 +69,7 @@ The encrypted flag is: 704073366705359338196741042088902542400637815384603946629
 Goodbye
 ````
 
-# Decryption 
+## Decryption 
 Since `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` and `e=3` every time no matter what `N` is, we know that `m` must be small because it's not "wrapping around" no matter what the modulus is. 
 
 Therefore we can simply find the cube root of `ct` since `ct = m^3 % N`.
@@ -97,7 +97,7 @@ while mid3 != ct:
 m = mid
 ````
 
-# Flag
+## Flag
 > HTB{5ma1l_E-xp0n3nt}
 
 We find `m = 412926389432612660984016953290834154417829082237`. Then we transform the message to bytes and decode the message to get the flag:

@@ -10,14 +10,14 @@ q = 2063
 e = 777887
 ````
 
-# Finding phi(n)
+## Finding phi(n)
 Next we use the Euler Totient Function to calculate `phi(n) = phi(p*q) = (p-1)*(q-1)`:
 
 ````Python
 phi = (p-1)*(q-1)
 ````
 
-# Finding d
+## Finding d
 We know that `d*e = 1 (mod phi(n))`. Since `phi(n)` is relatively small, we use can brute force to get `d = 1457215`:
 
 ````Python
@@ -28,5 +28,5 @@ for d in range(0,phi):
         break
 ````
 
-# Flag
+## Flag
 > flag{d=1457215}

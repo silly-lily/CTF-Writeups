@@ -5,7 +5,7 @@ Baby Ducky Notes is a web challenge focusing on SQLi. We are given a website to 
 Looking at the file breakdown of the source code for this website, we see that it seems to be a python flask website. 
 ![tree](tree.png)
 
-# Database
+## Database
 Looking at the source code for the website, we see `src/database/database.py` which seems to hold the posts and users for the website. Looking at the database initializer, we see that the flag is stored as a post for the the user with id 1. We also see that an admin user is created in this initializer and presumably has user_id 1.
 
 ```Python
@@ -62,7 +62,7 @@ def db_init():
     ''')
 ```
 
-# Routing
+## Routing
 We know we want to see posts for the user `admin`, so we look at `src/routes.py` which seems to contain the website routing. Looking at the `posts_view(username, user)` function, we see it returns the posts of the user contained in the url. 
 
 ```Python
@@ -77,14 +77,14 @@ def posts_view(username, user):
     return render_template('posts.html', posts=posts)
 ```
 
-# Admin Posts
+## Admin Posts
 We know we should view `/posts/view/admin` to see the flag. Trying this we are notified we need to login.
 ![unauthorized](admin.png)
 
-# Account Creation
+## Account Creation
 We go to `/register` and fill out the form to create an account. We then go to the `/login` page and fill out the form to login with the account we just made.
 
-# Flag
+## Flag
 > TFCCTF{Adm1n_l0St_h1s_m1nd!}
 
 Now that we are logged in we go to `/posts/view/admin` again to see the flag.

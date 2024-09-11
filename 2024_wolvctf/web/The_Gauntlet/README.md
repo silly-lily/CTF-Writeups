@@ -3,13 +3,13 @@
 The Gauntlet is a web challenge where we need to solve 10 mini challenges.
 ![website](website.png)
 
-# Inspect Element
+## Inspect Element
 
 We're looking for something hidden on the page. We use `Inspect Element` to see the HTML source code and see the hidden HTML comment `\hidden9136234145526`.
 
 ![inspect_element](inspect_element.png)
 
-# 1. HTTP GET Request Header
+## 1. HTTP GET Request Header
 
 We decide to trying going to this page: `https://gauntlet-okntin33tq-ul.a.run.app/hidden9136234145526` and see that we need to set the HTTP Header `wolvsec` to `rocks`.
 
@@ -19,7 +19,7 @@ We try using `curl` with `-H 'wolvsec: rocks'` for the header and see the HTML c
 
 ![curl](curl.png)
 
-# 2. HTTP OPTIONS REQUEST
+## 2. HTTP OPTIONS REQUEST
 
 We find that we need to use a specific HTTP Method.
 
@@ -29,7 +29,7 @@ We try using `curl` with `-X OPTIONS` to make an HTTP OPTIONS Request and see th
 
 ![options](options.png)
 
-# 3. Query String Parameter
+## 3. Query String Parameter
 
 We find that we need to use a query parameter `wolvsec` who's value is `c#+l`.
 
@@ -39,7 +39,7 @@ We try using `curl` with `-G` and `--data-urlencode`. We see the HTML comment `/
 
 ![URL Encoded Query String](url_encode.png)
 
-# 4. HTTP POST Request
+## 4. HTTP POST Request
 
 We find that we need to make an HTTP POST Request with the header `Content-Type: application/x-www-form-urlencoded` and the form body `wolvsec=rocks`.
 
@@ -49,7 +49,7 @@ We try using `curl` with `-H 'Content-Type: application/x-www-form-urlencoded'` 
 
 ![URL Encoded Query String](url_encode.png)
 
-# 5. HTTP POST Request
+## 5. HTTP POST Request
 
 We're looking for something hidden on the page that won't show up if we use `View Source`.
 
@@ -59,7 +59,7 @@ We try using `Inspect Element` again and find `/hidden5935562908234559`.
 
 ![Inspect Element](inspect2.png)
 
-# 6. URL Redirect
+## 6. URL Redirect
 
 We see that our page has been redirected from `/hidden5935562908234559` to `/hidden5935562908234557`.
 
@@ -73,7 +73,7 @@ We see that our HTTP RESPONSE has a `location: /hidden5935562908234558` header. 
 
 ![Curl For Redirect2](curl_again.png)
 
-# 7. Visit 500 Times
+## 7. Visit 500 Times
 
 We see that we need to visit our page 500 times.
 
@@ -89,7 +89,7 @@ We refresh the page and find `/hidden00127595382036382`
 
 ![Challenge 7](solution7.png)
 
-# 8. Visit 500 Times (Harder Edition)
+## 8. Visit 500 Times (Harder Edition)
 
 We see that we need to visit our page 500 times again.
 
@@ -107,7 +107,7 @@ We refresh the page and find `/hidden83365193635473293`.
 
 ![Challenge 8](solution8.png)
 
-# 9. Visit 1000 Times
+## 9. Visit 1000 Times
 
 We see that we need to visit our page 1000 times.
 
@@ -134,7 +134,7 @@ print(res.text)
 
 In our output we find `/flag620873537329327365`.
 
-# Flag
+## Flag
 > wctf{w3_h0p3_y0u_l34rn3d_s0m3th1ng_4nd_th4t_w3b_c4n_b3_fun_853643}
 
 ![Flag](flag.png)

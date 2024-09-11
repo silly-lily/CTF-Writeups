@@ -3,17 +3,17 @@ Everyones A Critic 2 is an osint challenge that is an extension of Everyones A C
 
 ![Search Results](search.png)
 
-# YouTube Channel
+## YouTube Channel
 We notice the first user had the same name and profile picture as the discord user from Everyone's A Critic 1, so we take a look at the user's YouTube profile.
 
 ![YouTube](youtube.png)
 
-# Playlists
+## Playlists
 We explore his channel by looking at every category: `HOME`, `VIDEOS`, `PLAYLISTS`, `CHANNELS`, and `ABOUT`. We notice he has a playlist.
 
 ![Playlists](playlists.png)
 
-# Flag
+## Flag
 > uiuctf{m@kE_sUrE_2_j01n_mY_ch@nn3L}
 
 We click on `VIEW FULL PLAYLIST` below the playlist and found the flag.
