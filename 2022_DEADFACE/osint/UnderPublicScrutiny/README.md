@@ -1,5 +1,5 @@
-# Challenge
-We have to find the GitHub of the DEADFACE CTF that they mentioned on Ghost Town.
+# Under Public Scrutiny
+Under Public Scrutiny is an osint challenge where we need to find the GitHub of the DEADFACE CTF that is mentioned on Ghost Town.
 
 # Ghost Town
 The first thing we did was Google search for `Ghost Town DEADFACE`.
@@ -22,6 +22,8 @@ Then we went to `www.github.com/deadf4c3`.
 ![GitHub](github.png)
 
 # Flag
+> flag{yAy_4_publ1c_g1tHUB_rep0s}
+
 We noticed they had one repository `tarrasque`. We chose that repository and found the flag.
 
 ![Flag](flag.png)

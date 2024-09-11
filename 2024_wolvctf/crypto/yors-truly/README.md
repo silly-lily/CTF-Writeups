@@ -1,6 +1,6 @@
-# Challenge
+# Yors-Truly
+Yours-Truly is a cryptography challenge where we need to find the key:
 
-We need to find the key.
 ```Python
 import base64
 
@@ -43,5 +43,6 @@ print(key)
 ```
 
 # Flag
-The flag is `wctf{X0R_i5_f0rEv3r_My_L0Ve}`.
+> wctf{X0R_i5_f0rEv3r_My_L0Ve}
+
 ![Flag](flag.png)

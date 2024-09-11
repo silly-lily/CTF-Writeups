@@ -1,12 +1,13 @@
-# Challenge
+# Baby Ducky Notes
 
-We are given a website to create and read blog posts and source code for this website. This website makes you login before creating a username and password. In order to login you must have a registered account.
+Baby Ducky Notes is a web challenge focusing on SQLi. We are given a website to create and read blog posts and source code for this website. This website makes you login before creating a username and password. In order to login we must have a registered account.
 
 Looking at the file breakdown of the source code for this website, we see that it seems to be a python flask website. 
 ![tree](tree.png)
 
 # Database
-Looking at the source code for the website, we see `src/database/database.py` which seems to hold the posts and users for the website. Looking at the database initalizer, we see that the flag is stored as a post for the the user with id 1. We also see that an admin user is created in this initializer and presumably has user_id 1.
+Looking at the source code for the website, we see `src/database/database.py` which seems to hold the posts and users for the website. Looking at the database initializer, we see that the flag is stored as a post for the the user with id 1. We also see that an admin user is created in this initializer and presumably has user_id 1.
+
 ```Python
 # src/database/database.py
 def db_init():
@@ -84,5 +85,7 @@ We know we should view `/posts/view/admin` to see the flag. Trying this we are n
 We go to `/register` and fill out the form to create an account. We then go to the `/login` page and fill out the form to login with the account we just made.
 
 # Flag
+> TFCCTF{Adm1n_l0St_h1s_m1nd!}
+
 Now that we are logged in we go to `/posts/view/admin` again to see the flag.
 ![flag](flag.png)

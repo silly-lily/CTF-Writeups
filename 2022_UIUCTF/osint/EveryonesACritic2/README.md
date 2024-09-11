@@ -1,5 +1,5 @@
-# Challenge 
-In the first challenge, we found the discord user reviewing UIUCTF. Now we need to find his YouTube Channel. First we go to youtube and search for `Chuck Lephucke`.
+# Everyones A Critic 2
+Everyones A Critic 2 is an osint challenge that is an extension of Everyones A Critic 1. In the first challenge, we found the discord user reviewing UIUCTF. Now we need to find his YouTube Channel. First we go to youtube and search for `Chuck Lephucke`.
 
 ![Search Results](search.png)
 
@@ -14,6 +14,8 @@ We explore his channel by looking at every category: `HOME`, `VIDEOS`, `PLAYLIST
 ![Playlists](playlists.png)
 
 # Flag
-We click on `VIEW FULL PLAYLIST` below the playlist and found the flag `uiuctf{m@kE_sUrE_2_j01n_mY_ch@nn3L}`. 
+> uiuctf{m@kE_sUrE_2_j01n_mY_ch@nn3L}
+
+We click on `VIEW FULL PLAYLIST` below the playlist and found the flag.
 
 ![Flag](flag.png)

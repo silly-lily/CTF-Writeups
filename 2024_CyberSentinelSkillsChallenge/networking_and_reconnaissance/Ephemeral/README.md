@@ -1,5 +1,5 @@
-# Challenge
-We need to find the flag which is hosted on a non-standard port.
+# Ephemeral
+Ephemeral is a networking and reconnaissance challenge where we need to find the flag which is hosted on a non-standard port.
 
 # Nmap
 First we use Nmap with the `-p-` flag to scan all of `34.31.144.172` ports:
@@ -20,6 +20,8 @@ PORT      STATE  SERVICE
 ```
 
 # Flag
+> C1{ch3ck_4ll_p0rts!}
+
 We see that there is a service running on non-standard port 51147. We use Netcat to interact with this port:
 ```
 nc 34.31.144.172 51147

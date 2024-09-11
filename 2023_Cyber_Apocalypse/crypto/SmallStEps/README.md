@@ -1,8 +1,9 @@
-# Challenge
-As you continue your journey, you must learn about the encryption method the aliens used to secure their communication from eavesdroppers. The engineering team has designed a challenge that emulates the exact parameters of the aliens' encryption system, complete with instructions and a code snippet to connect to a mock alien server. Your task is to break it.
+# Small StEps
+Small StEps is a crypto challenge focusing on RSA. We are given an encrypted flag and an encryption scheme and need to decrypt the flag.
 
 # Encryption
-We notice that the encryption algorthim used is RSA with `e=3`, `p` and `q` being randoms, and `n=pq`.
+We notice that the encryption algorithm used is RSA with `e=3`, `p` and `q` being randoms, and `n=pq`.
+
 ````Python 
 class RSA:
 
@@ -18,9 +19,10 @@ class RSA:
 ````
 
 # Query
-We run `ncat 178.62.9.10 30705` to interact with the server. We make three queries to the server and notice that `e = 3` and `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` everytime, but `ct` changes.
+We run `nc 178.62.9.10 30705` to interact with the server. We make three queries to the server and notice that `e = 3` and `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` every time, but `N` changes.
+
 ````
-root@lilys-computer:/mnt/c/Users/li16l/OneDrive/Documents/coding/ctf-writeups# ncat 178.62.9.10 30705
+$ nc 178.62.9.10 30705
 This is the second level of training.
 
 [E]ncrypt the flag.
@@ -68,9 +70,10 @@ Goodbye
 ````
 
 # Decryption 
-Since `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` and `e=3` everytime no matter what `n` is, we know that `m` must be  small because it's not "wrapping around" no matter what the modulus is. 
+Since `ct=70407336670535933819674104208890254240063781538460394662998902860952366439176467447947737680952277637330523818962104685553250402512989897886053` and `e=3` every time no matter what `N` is, we know that `m` must be small because it's not "wrapping around" no matter what the modulus is. 
 
-Therefore we can simply find the cube root of `ct` since `ct = m^3 % N`. Now `m = 412926389432612660984016953290834154417829082237`.
+Therefore we can simply find the cube root of `ct` since `ct = m^3 % N`.
+
 ````Python
 low = 0
 high = ct
@@ -94,7 +97,11 @@ while mid3 != ct:
 m = mid
 ````
 
-Then we simply transform the message to bytes and decode the message to get the flag `HTB{5ma1l_E-xp0n3nt}`.
+# Flag
+> HTB{5ma1l_E-xp0n3nt}
+
+We find `m = 412926389432612660984016953290834154417829082237`. Then we transform the message to bytes and decode the message to get the flag:
+
 ````Python
 m = long_to_bytes(m)
 m = m.decode()

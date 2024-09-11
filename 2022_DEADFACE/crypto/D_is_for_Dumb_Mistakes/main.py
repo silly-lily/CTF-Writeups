@@ -9,4 +9,5 @@ for d in range(0,phi):
 
     if (d*e)%phi == 1:
         print(d)
+        break
 
