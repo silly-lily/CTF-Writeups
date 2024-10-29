@@ -1,4 +1,4 @@
-## Ro
+# Ro
 
 Ro is a crypto challenge that asks us to solve:
 

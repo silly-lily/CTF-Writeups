@@ -40,4 +40,4 @@ pt = ct.decode()
 ````
 
 ## Flag
-> HTB{1n_y0ur_j0urn3y_y0u_wi1l_se3_th15_enc0d1ngs_ev3rywher3}`
+> HTB{1n_y0ur_j0urn3y_y0u_wi1l_se3_th15_enc0d1ngs_ev3rywher3}
