@@ -17,17 +17,13 @@ Suppose we have an RSA Cryptosystem, the key generation function selects keys $e
 
 Additionally, since $e$ is necessarily coprime to $\phi(N)$, the following property holds:
 
-> $
-d \equiv e^{-1} \pmod{\phi(N)}
-$
+> $d \equiv e^{-1} \pmod{\phi(N)}$
 
 <br>
 
 Lastly, since $p$ and $q$ are distinct primes, the following property holds:
 
-> $
-d \equiv e^{-1} \pmod{(p-1)(q-1)}
-$
+> $d \equiv e^{-1} \pmod{(p-1)(q-1)}$
 
 ---
 
