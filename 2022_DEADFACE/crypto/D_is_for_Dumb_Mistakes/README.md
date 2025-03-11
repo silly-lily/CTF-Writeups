@@ -27,7 +27,7 @@ Lastly, since $p$ and $q$ are distinct primes, the following property holds:
 
 ---
 
-### Computing $d$
+#### Computing $d$
 First we calculate $phi(n)$:
 
 ````Python
