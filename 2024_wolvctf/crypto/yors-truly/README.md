@@ -22,19 +22,21 @@ ciphertext_decoded = base64.b64decode("NkMHEgkxXjV/BlN/ElUKMVZQEzFtGzpsVTgGDw=="
 
 We can use the properties of XOR to manipulate the ciphertext equation to solve for the key:
 
-$
-ct = key \oplus pt\\
-ct \oplus key = (key \oplus) pt \oplus key\\
-ct \oplus key = (pt \oplus key) \oplus key\\
-ct \oplus key = pt \oplus (key \oplus key)\\
-ct \oplus key = pt \oplus 0\\
-ct \oplus key = pt\\
-(ct \oplus key) \oplus ct = pt \oplus ct\\
-(key \oplus ct) \oplus ct = pt \oplus ct\\
-key \oplus (ct \oplus ct) = pt \oplus ct\\
-key \oplus 0 = pt \oplus ct\\
-key = pt \oplus ct\\
-$
+```math
+\begin{alignedat}{2}
+&ct = key \oplus pt\\
+&ct \oplus key = (key \oplus) pt \oplus key\\
+&ct \oplus key = (pt \oplus key) \oplus key\\
+&ct \oplus key = pt \oplus (key \oplus key)\\
+&ct \oplus key = pt \oplus 0\\
+&ct \oplus key = pt\\
+&(ct \oplus key) \oplus ct = pt \oplus ct\\
+&(key \oplus ct) \oplus ct = pt \oplus ct\\
+&key \oplus (ct \oplus ct) = pt \oplus ct\\
+&key \oplus 0 = pt \oplus ct\\
+&key = pt \oplus ct\\
+\end{alignedat}
+```
 
 ---
 
