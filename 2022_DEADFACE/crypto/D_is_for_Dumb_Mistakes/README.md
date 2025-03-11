@@ -11,9 +11,7 @@ Recompute the decryption key ($d$) and submit the flag as $flag(d-VALUE)$
 #### Deriving $d$
 Suppose we have an RSA Cryptosystem, the key generation function selects keys $e,d$ where the following property holds:
 
-> $
-ed \equiv 1 \pmod{\phi(N)}
-$
+> $ed \equiv 1 \pmod{\phi(N)}$
 
 <br>
 
