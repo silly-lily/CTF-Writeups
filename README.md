@@ -3,6 +3,19 @@ My writeups for various CTFs
 
 ---
 
+#### 2025
+
+- [DawgCTF 2025](/2025_DawgCTF/)
+    - Crypto: [Baby RSA 1](/2025_DawgCTF/Crypto/BabyRSA1/), [The Birds](/2025_DawgCTF/Crypto/The_Birds/)
+    - Misc: [Don't Touch My Fone](/2025_DawgCTF/Misc/Phone/), [Mystery Signal I](/2025_DawgCTF/Misc/MysterySignal/)
+    - Osint: [GEOSINT - chall1](/2025_DawgCTF/Osint/Chal1/)
+- [UTCTF 2025](/2025_UTCTF/)
+    - Crypto: [DCΔ](/2025_UTCTF/Crypto/RSA2/), [RSA](/2025_UTCTF/Crypto/RSA/)
+    - Misc: [Trapped in Plain Sight 1](/2025_UTCTF/Misc/Trapped1/)
+
+
+---
+
 #### 2024
 - [BuckeyeCTF 2024](/2024_BuckeyeCTF/)
     - beginner pwn: [runway 0](/2024_BuckeyeCTF/beginner-pwn/runway0/)
