@@ -4,6 +4,10 @@ My writeups for various CTFs
 ---
 #### 2026
 
+- [THEM?!CTF 2026](/2026_THEMCTF/)
+    - Crypto: [ArtIsMissed II](/2026_THEMCTF/Crypto/ArtIsMissed2/), [D3Spacito](/2026_THEMCTF/Crypto/D3Spacito/), [No 7race](/2026_THEMCTF/Crypto/No_7race/)
+    - Forensics: [Confidential - I](/2026_THEMCTF/Forensics/Confidential1/), [Confidential - II](/2026_THEMCTF/Forensics/Confidential2/)
+
 - [UTCTF 2026](/2026_UTCTF/)
     - Pwn: [Hour of Joy](/2026_UTCTF/Binary_Exploitation/Hour_Of_Joy/), [Rude Guard](/2026_UTCTF/Binary_Exploitation/Rude_Guard/)
     - Crypto: [Fortune Teller](/2026_UTCTF/Cryptography/Fortune_Teller/)
